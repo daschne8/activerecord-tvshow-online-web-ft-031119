@@ -16,8 +16,8 @@ class Show < ActiveRecord::Base
     self.all.where("rating = ?",lowest_rating).first
   end
 
-  def method_name
-
+  def self.ratings_sum
+    self.all.sum(:rating)
   end
 
 end
