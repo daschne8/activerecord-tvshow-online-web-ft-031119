@@ -13,7 +13,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.least_popular_show
-    self.all.where("rating = ?",lowest_rating)
+    self.all.where("rating = ?",lowest_rating).first
   end
 
   def method_name
