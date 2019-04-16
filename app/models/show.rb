@@ -4,4 +4,8 @@ class Show < ActiveRecord::Base
     self.all.maximum(:rating)
   end
 
+  def most_populat_show
+    self.all.maximum(:rating)
+  end
+
 end
